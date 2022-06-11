@@ -1,51 +1,27 @@
-import uniqid from "uniqid";
+import "./style.css";
 import Gameboard from "./components/Gameboard";
 import Card from "./components/Card";
+import botw from "./images/botw.jpg";
+import oot from "./images/oot.jpg";
+import mm from "./images/mm.jpg";
+import ss from "./images/ss.jpg";
+import tp from "./images/tp.jpg";
+import ww from "./images/ww.jpg";
+import la from "./images/la.jpg";
+import og from "./images/og.jpg";
 
 function App() {
     return (
         <div className="App">
             <Gameboard>
-                <Card
-                    src="src/images/botw.jpg"
-                    alt="Breath of the Wild Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/oot.jpg"
-                    alt="Ocarina of Time Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/mm.jpg"
-                    alt="Majora's Mask Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/ss.jpg"
-                    alt="Skyward Sword Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/tp.jpg"
-                    alt="Twilight Princess Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/ww.jpg"
-                    alt="Wind Waker Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/la.jpg"
-                    alt="Link's Awakening Link"
-                    uniqid={uniqid()}
-                />
-                <Card
-                    src="src/images/og.jpg"
-                    alt="The Original 8-Bit Link"
-                    uniqid={uniqid()}
-                />
+                <Card src={botw} alt="Breath of the Wild Link" />
+                <Card src={oot} alt="Ocarina of Time Link" />
+                <Card src={mm} alt="Majora's Mask Link" />
+                <Card src={ss} alt="Skyward Sword Link" />
+                <Card src={tp} alt="Twilight Princess Link" />
+                <Card src={ww} alt="Wind Waker Link" />
+                <Card src={la} alt="Link's Awakening Link" />
+                <Card src={og} alt="The Original 8-Bit Link" />
             </Gameboard>
         </div>
     );

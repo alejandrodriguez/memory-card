@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 350px;
+    width: 270px;
+    object-fit: cover;
+}
+
+.Card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.Card:hover {
+    box-shadow: 5px 5px 10px green;
+}
+
+.CardsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    height: 80vh;
+    width: 70vw;
+    margin: auto;
+}
