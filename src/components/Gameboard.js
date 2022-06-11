@@ -4,8 +4,6 @@ import uniqid from "uniqid";
 
 function Gameboard(props) {
     const [cards, setCards] = useState(props.children);
-    const [score, setScore] = useState(0);
-    const [maxScore, setMaxScore] = useState(0);
 
     function shuffle() {
         let shuffledCards = [...cards];
@@ -18,6 +16,26 @@ function Gameboard(props) {
         shuffle();
     }, []);
 
+    const [picturesClicked, setPicturesClicked] = useState([]);
+    const [score, setScore] = useState(0);
+    const [maxScore, setMaxScore] = useState(0);
+
+    function updateScore(e) {
+        console.log(picturesClicked);
+        if (!picturesClicked.includes(e.target.src)) {
+            const newScore = score + 1;
+            setScore(newScore);
+            if (newScore > maxScore) {
+                setMaxScore(maxScore + 1);
+            }
+            setPicturesClicked([...picturesClicked].concat(e.target.src));
+        } else {
+            setScore(0);
+            setPicturesClicked([]);
+        }
+        shuffle();
+    }
+
     return (
         <div className="Gameboard">
             <div>
@@ -29,7 +47,11 @@ function Gameboard(props) {
             </div>
             <div className="CardsContainer">
                 {cards.map(card => (
-                    <Card {...card.props} shuffle={shuffle} key={uniqid()} />
+                    <Card
+                        {...card.props}
+                        onClick={e => updateScore(e)}
+                        key={uniqid()}
+                    />
                 ))}
             </div>
         </div>

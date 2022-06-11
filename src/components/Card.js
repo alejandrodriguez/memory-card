@@ -1,6 +1,6 @@
 function Card(props) {
     return (
-        <div className="Card" onClick={props.shuffle}>
+        <div className="Card" onClick={props.onClick}>
             <img src={props.src} alt={props.alt} />
         </div>
     );
