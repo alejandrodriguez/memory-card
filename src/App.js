@@ -13,6 +13,7 @@ import og from "./images/og.jpg";
 function App() {
     return (
         <div className="App">
+            <h1>Memory Game</h1>
             <Gameboard>
                 <Card src={botw} alt="Breath of the Wild Link" />
                 <Card src={oot} alt="Ocarina of Time Link" />

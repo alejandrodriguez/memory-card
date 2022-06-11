@@ -39,11 +39,12 @@ function Gameboard(props) {
     return (
         <div className="Gameboard">
             <div>
-                <span className="instructions">
+                <p className="instructions">
                     Click a picture, but don't click the same picture twice!
-                </span>
-                <span className="score">Score: {score}</span>
-                <span className="score">Max Score: {maxScore}</span>
+                </p>
+                <p className="score">
+                    Score: {score} Max Score: {maxScore}
+                </p>
             </div>
             <div className="CardsContainer">
                 {cards.map(card => (

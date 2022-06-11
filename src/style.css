@@ -30,3 +30,27 @@ img {
     width: 70vw;
     margin: auto;
 }
+
+h1,
+.instructions,
+.score {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.instructions {
+    font-size: 16px;
+}
+
+.score {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, yellow, rgb(145, 145, 0));
+}
